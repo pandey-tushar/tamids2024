@@ -236,14 +236,8 @@ def authors():
 
 
 # Page title
-st.set_page_config(page_title='Interactive Data Explorer', page_icon='📊')
-st.title('📊 Interactive Data Explorer')
-
-with st.expander('About this app'):
-  st.markdown('**What can this app do?**')
-  st.info('This app shows the use of Pandas for data wrangling, Altair for chart creation and editable dataframe for data interaction.')
-  st.markdown('**Impact of Sea Level Rise**')
-  st.warning('This will look at correlation between the sea level rising and different data')
+st.set_page_config(page_title="Sea Level Rising and it's impact", page_icon='📊')
+st.title('📊 Sea Level Rising and impact')
   
 st.subheader('SEA LEVEL CHANGE')
 
