@@ -76,12 +76,12 @@ def authors():
     # Dividing screen into 2 parts -
     col1, col2, col3 = st.columns((0.75,0.1,2))
 
-    # Setting the image -
-    image = Image.open('Images/tushar.png')
+    # # Setting the image -
+    # image = Image.open('Images/tushar.png')
 
-    # Setting the image width -
-    col1.write("")
-    col1.image(image, use_column_width=True)
+    # # Setting the image width -
+    # col1.write("")
+    # col1.image(image, use_column_width=True)
 
     # Ritesh Singh Suhag -
     col3.write("## Tushar Pandey")
@@ -101,13 +101,13 @@ def authors():
     # Dividing screen into 2 parts -
     col1, col2, col3 = st.columns((0.75,0.1,2))
 
-    # Setting the image -
-    image = Image.open('Images/sambandh.png')
+    # # Setting the image -
+    # image = Image.open('Images/sambandh.png')
 
-    # Setting the image width -
-    col1.write("")
-    col1.write("")
-    col1.image(image, use_column_width=True)
+    # # Setting the image width -
+    # col1.write("")
+    # col1.write("")
+    # col1.image(image, use_column_width=True)
 
     # Ritesh Singh Suhag -
     col3.write("## Sambandh Dhal")
@@ -128,76 +128,76 @@ def authors():
     col1, col2, col3 = st.columns((0.75,0.1,2))
 
     # Setting the image -
-    image = Image.open('Images/Abhijeet.png')
+    # image = Image.open('Images/Abhijeet.png')
 
-    # Setting the image width -
-    col1.write("")
-    col1.write("")
-    col1.image(image, use_column_width=True)
+    # # Setting the image width -
+    # col1.write("")
+    # col1.write("")
+    # col1.image(image, use_column_width=True)
 
-    # Abhijit Mahapatra -
-    col3.write("## Abhijit Mahapatra")
+    # Vivek -
+    col3.write("## Vivek")
 
     # About section -
     col3.write("""
-               Research Area: Data Science
+               Research Area: 
 
-               * **University:** Texas A&M University (Department of Computer Engineering)
-               * **Degree:** Masters Student (Computer Engineering)
-               * **Email:** mahapatraabhijit.9@tamu.edu
-               * **LinkedIn:** [linkedin.com/in/abhijit-mahapatra807/](https://www.linkedin.com/in/abhijit-mahapatra807/)
-               * **Github:** [github.com/livingMabhijit](https://github.com/livingMabhijit)
+               * **University:** Texas A&M University ()
+               * **Degree:** PhD Student (Engineering)
+               * **Email:** 
+               * **LinkedIn:** []()
+               * **Github:** []()
                """)
     st.write("")
     # Dividing screen into 2 parts -
     col1, col2, col3 = st.columns((0.75,0.1,2))
 
-    # Setting the image -
-    image = Image.open('Images/swarnabha.png')
+    # # Setting the image -
+    # image = Image.open('Images/swarnabha.png')
 
-    # Setting the image width -
-    col1.write("")
-    col1.write("")
-    col1.image(image, use_column_width=True)
+    # # Setting the image width -
+    # col1.write("")
+    # col1.write("")
+    # col1.image(image, use_column_width=True)
 
-    # Swarnabha -
-    col3.write("## Swarnabha Roy")
+    # Rishabh -
+    col3.write("## Rishabh")
 
     # About section -
     col3.write("""
-               Research Area: Modular Robotics and Virtual Reality.
+               Research Area: .
 
-               * **University:** Texas A&M University (Department of Electrical and Computer Engineering)
-               * **Degree:** PhD Student (Computer Engineering)
-               * **Email:** swarnabha7@tamu.edu
-               * **LinkedIn:** [linkedin.com/in/swarnabha-roy-53a588a4/](https://www.linkedin.com/in/swarnabha-roy-53a588a4/)
-               * **Github:** [github.com/swarnabha13](https://github.com/swarnabha13)
+               * **University:** Texas A&M University ()
+               * **Degree:** PhD Student ( Engineering)
+               * **Email:** 
+               * **LinkedIn:** []()
+               * **Github:** []()
                """)
     st.write("")
 
     # Dividing screen into 2 parts -
     col1, col2, col3 = st.columns((0.75,0.1,2))
 
-    # Setting the image -
-    image = Image.open('Images/dd.png')
+    # # Setting the image -
+    # image = Image.open('Images/dd.png')
 
-    # Setting the image width -
-    col1.write("")
-    col1.write("")
-    col1.image(image, use_column_width=True)
+    # # Setting the image width -
+    # col1.write("")
+    # col1.write("")
+    # col1.image(image, use_column_width=True)
 
-    # Ritesh Singh Suhag -
-    col3.write("## Rohit Dube")
+    # Sheil -
+    col3.write("## Sheil")
 
     # About section -
     col3.write("""
-               Research Area: Operations Research
+               Research Area: 
 
-               * **University:** Texas A&M University (Department of Industrial Engineering)
-               * **Degree:** PhD Student (Industrial Engineering)
-               * **Email:** dube.rohit@tamu.edu
-               * **LinkedIn:** [linkedin.com/in/rohitdube922/](https://www.linkedin.com/in/rohitdube922/)
-               * **Github:** [github.com/Rohitd922](https://github.com/Rohitd922)
+               * **University:** Texas A&M University ()
+               * **Degree:** PhD Student ( Engineering)
+               * **Email:** 
+               * **LinkedIn:** []()
+               * **Github:** []()
                """)
     st.write("")
 
