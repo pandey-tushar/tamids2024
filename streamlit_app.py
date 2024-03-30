@@ -74,10 +74,12 @@ def east_coast():
 
 
 
+
 #~~~~~~~~~~~~~~~~~~ Causal interference of the sea level rise ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def interference():
     st.title('Causal interference of the sea level rise')
     st.write(" ")
+    
 
 
 
@@ -85,12 +87,14 @@ def interference():
 def predicting_sea_level():
     st.title('Predicting Sea levels')
     st.write(" ")
+    
 
 
 #~~~~~~~~~~~~~~~~~~ Controlling sea level rise ~~~~~~~~~~~~~~~~~~~~~~~
 def control_the_rise():
     st.title('Controlling sea level rise')
     st.write(" ")
+    
 
 
 
