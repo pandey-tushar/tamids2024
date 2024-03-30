@@ -220,7 +220,7 @@ def authors():
     # col1.image(image, use_column_width=True)
 
     # Sheil -
-    col3.write("## Sheil")
+    col3.write("## Sheel")
 
     # About section -
     col3.write("""
