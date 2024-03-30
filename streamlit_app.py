@@ -85,6 +85,40 @@ with st.expander('About this app'):
   
 st.subheader('SEA LEVEL CHANGE')
 
+
+# Sidebar navigation for users -
+st.sidebar.header('Navigation tab')
+navigation_tab = st.sidebar.selectbox('Choose a tab', ('Home-Page',
+ 'Publication Analysis','Collaboration potential', 'Grant Analysis',
+ 'Impact score', 'About the Authors'))
+
+# Displaying pages according to the selection -
+
+# Home page -
+if navigation_tab == 'Home-Page':
+    home_page()
+
+# First page -
+elif navigation_tab == 'Sea Levels on the east coast':
+    publication_analysis()
+
+
+# Second Page -
+elif navigation_tab == 'Causal interference of the sea level rise':
+    collaboration_plot()
+
+# Third Page -
+elif navigation_tab == 'Predicting Sea levels':
+    get_grant_analysis()
+
+# Fourth Page -
+elif navigation_tab == 'Controlling sea level rise':
+    impact_score()
+
+# About Page -
+elif navigation_tab == 'About the Authors':
+    authors()
+
 # Load data
 # df = pd.read_csv('data/movies_genres_summary.csv')
 # df.year = df.year.astype('int')
