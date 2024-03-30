@@ -8,7 +8,69 @@ import webbrowser
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~ Home Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def home_page():
-  st.info("Please navigate using the select box in the sidebar on the left.")
+    # Setting the title -
+    #st.title("TAMIDS Data Science Competition 2022")
+
+    # Desription -
+    st.markdown("""
+                <p style='text-align: justify;'>
+                The 2024 TAMIDS Data Science Competition is about sea level rising and its impact.
+                </p>
+                """, unsafe_allow_html=True)
+
+    # Problem Statement -
+    st.write("""
+             ## Problem Statement
+             """)
+    st.markdown("""
+                <p style='text-align: justify;'>
+            Prob stat
+             </p>
+                """, unsafe_allow_html=True)
+
+    # Data Collection and Pre-processing -
+    st.write("""
+             ## Data Collection and Pre-processing
+             """)
+    st.markdown("""
+                <p style='text-align: justify;'>
+                 Data collec + prepro
+                 </p>
+                """, unsafe_allow_html=True)
+    
+    get_formula()
+    
+    st.markdown("""
+                <p style='text-align: justify;'>
+             New para
+             </p>
+                """, unsafe_allow_html=True)
+    st.markdown("""
+                <p style='text-align: justify;'>
+             new paragraph
+             </p>
+                """, unsafe_allow_html=True)
+
+    
+    # Overview -
+    st.write("""
+             ## Methodology
+             """)
+    st.markdown("""
+                <p style='text-align: justify;'>
+                New parag
+             </p>
+                """, unsafe_allow_html=True)
+
+    # Navigation -
+    st.write("")
+    st.info("Please navigate using the select box in the sidebar on the left.")
+    
+def get_formula():
+    #Getting the graph
+    HtmlFile = open(f"formula.html",'r',encoding = 'utf-8')
+    source_code_2 = HtmlFile.read()
+    components.html(source_code_2,height = 200)
 
 
 # Page title
