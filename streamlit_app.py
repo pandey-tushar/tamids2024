@@ -8,6 +8,9 @@ import webbrowser
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~ Home Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def home_page():
+  st.info("Please navigate using the select box in the sidebar on the left.")
+
+
 # Page title
 st.set_page_config(page_title='Interactive Data Explorer', page_icon='📊')
 st.title('📊 Interactive Data Explorer')
