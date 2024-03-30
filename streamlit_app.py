@@ -66,6 +66,35 @@ def home_page():
 
 
 
+
+#------------------ Sea Levels on the east coast  -------------------------
+def east_coast():
+    st.title('Sea Levels on the east coast')
+    st.write(" ")
+
+
+
+#~~~~~~~~~~~~~~~~~~ Causal interference of the sea level rise ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def interference():
+    st.title('Causal interference of the sea level rise')
+    st.write(" ")
+
+
+
+#~~~~~~~~~~~~~~~~~ Predicting Sea levels ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def predicting_sea_level():
+    st.title('Predicting Sea levels')
+    st.write(" ")
+
+
+#~~~~~~~~~~~~~~~~~~ Controlling sea level rise ~~~~~~~~~~~~~~~~~~~~~~~
+def control_the_rise():
+    st.title('Controlling sea level rise')
+    st.write(" ")
+
+
+
+
 #------------------ About the Authors -------------------------
 def authors():
     # Setting the title -
@@ -238,7 +267,7 @@ elif navigation_tab == 'Causal interference of the sea level rise':
 
 # Third Page -
 elif navigation_tab == 'Predicting Sea levels':
-    Predicting_sea_level()
+    predicting_sea_level()
 
 # Fourth Page -
 elif navigation_tab == 'Controlling sea level rise':
