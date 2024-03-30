@@ -38,7 +38,7 @@ def home_page():
                  </p>
                 """, unsafe_allow_html=True)
     
-    get_formula()
+    
     
     st.markdown("""
                 <p style='text-align: justify;'>
