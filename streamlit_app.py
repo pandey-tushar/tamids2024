@@ -8,8 +8,6 @@ import webbrowser
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~ Home Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def home_page():
-    # Setting the title -
-    #st.title("TAMIDS Data Science Competition 2022")
 
     # Desription -
     st.markdown("""
@@ -65,12 +63,143 @@ def home_page():
     # Navigation -
     st.write("")
     st.info("Please navigate using the select box in the sidebar on the left.")
-    
-def get_formula():
-    #Getting the graph
-    HtmlFile = open(f"formula.html",'r',encoding = 'utf-8')
-    source_code_2 = HtmlFile.read()
-    components.html(source_code_2,height = 200)
+
+
+
+#------------------ About the Authors -------------------------
+def authors():
+    # Setting the title -
+    st.title("About the Authors")
+    st.write(" ")
+
+
+    # Dividing screen into 2 parts -
+    col1, col2, col3 = st.columns((0.75,0.1,2))
+
+    # Setting the image -
+    image = Image.open('Images/tushar.png')
+
+    # Setting the image width -
+    col1.write("")
+    col1.image(image, use_column_width=True)
+
+    # Ritesh Singh Suhag -
+    col3.write("## Tushar Pandey")
+
+    # About section -
+    col3.write("""
+               Research Area: Quantum Topology
+
+               * **University:** Texas A&M University (Department of Mathematics)
+               * **Degree:** PhD Student (2024)
+               * **Email:** tusharp@tamu.edu
+               * **LinkedIn:** [linkedin.com/in/tushar-pandey1612/](https://www.linkedin.com/in/tushar-pandey1612/)
+               * **Github:** [github.com/pandey-tushar](https://github.com/pandey-tushar)
+               """)
+    st.write("")
+
+    # Dividing screen into 2 parts -
+    col1, col2, col3 = st.columns((0.75,0.1,2))
+
+    # Setting the image -
+    image = Image.open('Images/sambandh.png')
+
+    # Setting the image width -
+    col1.write("")
+    col1.write("")
+    col1.image(image, use_column_width=True)
+
+    # Ritesh Singh Suhag -
+    col3.write("## Sambandh Dhal")
+
+    # About section -
+    col3.write("""
+               Research Area: Error Estimation and Machine Learning.
+
+               * **University:** Texas A&M University (Department of Electrical and Computer Engineering)
+               * **Degree:** PhD Student (Computer Engineering)
+               * **Email:** sambandh@tamu.edu
+               * **LinkedIn:** [linkedin.com/in/sambandh-dhal9163/](https://www.linkedin.com/in/sambandh-dhal9163/)
+               * **Github:** [github.com/Sambandh](https://github.com/Sambandh)
+               """)
+    st.write("")
+
+    # Dividing screen into 2 parts -
+    col1, col2, col3 = st.columns((0.75,0.1,2))
+
+    # Setting the image -
+    image = Image.open('Images/Abhijeet.png')
+
+    # Setting the image width -
+    col1.write("")
+    col1.write("")
+    col1.image(image, use_column_width=True)
+
+    # Abhijit Mahapatra -
+    col3.write("## Abhijit Mahapatra")
+
+    # About section -
+    col3.write("""
+               Research Area: Data Science
+
+               * **University:** Texas A&M University (Department of Computer Engineering)
+               * **Degree:** Masters Student (Computer Engineering)
+               * **Email:** mahapatraabhijit.9@tamu.edu
+               * **LinkedIn:** [linkedin.com/in/abhijit-mahapatra807/](https://www.linkedin.com/in/abhijit-mahapatra807/)
+               * **Github:** [github.com/livingMabhijit](https://github.com/livingMabhijit)
+               """)
+    st.write("")
+    # Dividing screen into 2 parts -
+    col1, col2, col3 = st.columns((0.75,0.1,2))
+
+    # Setting the image -
+    image = Image.open('Images/swarnabha.png')
+
+    # Setting the image width -
+    col1.write("")
+    col1.write("")
+    col1.image(image, use_column_width=True)
+
+    # Swarnabha -
+    col3.write("## Swarnabha Roy")
+
+    # About section -
+    col3.write("""
+               Research Area: Modular Robotics and Virtual Reality.
+
+               * **University:** Texas A&M University (Department of Electrical and Computer Engineering)
+               * **Degree:** PhD Student (Computer Engineering)
+               * **Email:** swarnabha7@tamu.edu
+               * **LinkedIn:** [linkedin.com/in/swarnabha-roy-53a588a4/](https://www.linkedin.com/in/swarnabha-roy-53a588a4/)
+               * **Github:** [github.com/swarnabha13](https://github.com/swarnabha13)
+               """)
+    st.write("")
+
+    # Dividing screen into 2 parts -
+    col1, col2, col3 = st.columns((0.75,0.1,2))
+
+    # Setting the image -
+    image = Image.open('Images/dd.png')
+
+    # Setting the image width -
+    col1.write("")
+    col1.write("")
+    col1.image(image, use_column_width=True)
+
+    # Ritesh Singh Suhag -
+    col3.write("## Rohit Dube")
+
+    # About section -
+    col3.write("""
+               Research Area: Operations Research
+
+               * **University:** Texas A&M University (Department of Industrial Engineering)
+               * **Degree:** PhD Student (Industrial Engineering)
+               * **Email:** dube.rohit@tamu.edu
+               * **LinkedIn:** [linkedin.com/in/rohitdube922/](https://www.linkedin.com/in/rohitdube922/)
+               * **Github:** [github.com/Rohitd922](https://github.com/Rohitd922)
+               """)
+    st.write("")
 
 
 # Page title
@@ -100,20 +229,20 @@ if navigation_tab == 'Home-Page':
 
 # First page -
 elif navigation_tab == 'Sea Levels on the east coast':
-    publication_analysis()
+    east_coast()
 
 
 # Second Page -
 elif navigation_tab == 'Causal interference of the sea level rise':
-    collaboration_plot()
+    interference()
 
 # Third Page -
 elif navigation_tab == 'Predicting Sea levels':
-    get_grant_analysis()
+    Predicting_sea_level()
 
 # Fourth Page -
 elif navigation_tab == 'Controlling sea level rise':
-    impact_score()
+    control_the_rise()
 
 # About Page -
 elif navigation_tab == 'About the Authors':
