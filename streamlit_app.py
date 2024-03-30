@@ -2,7 +2,12 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import altair as alt
+import streamlit.components.v1 as components
+import webbrowser
 
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~ Home Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def home_page():
 # Page title
 st.set_page_config(page_title='Interactive Data Explorer', page_icon='📊')
 st.title('📊 Interactive Data Explorer')
