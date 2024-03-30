@@ -245,8 +245,8 @@ st.subheader('SEA LEVEL CHANGE')
 # Sidebar navigation for users -
 st.sidebar.header('Navigation tab')
 navigation_tab = st.sidebar.selectbox('Choose a tab', ('Home-Page',
- 'Publication Analysis','Collaboration potential', 'Grant Analysis',
- 'Impact score', 'About the Authors'))
+ 'Sea Levels on the east coast','Casual interference of the sea level rise', 'Predicting Sea levels',
+ 'Controlling sea level rise', 'About the Authors'))
 
 # Displaying pages according to the selection -
 
