@@ -10,11 +10,8 @@ This data app shows a simple demonstration of an interactive data explorer that 
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://tamids2024.streamlit.app/)
 
-## GitHub Codespaces
+## Websites for TDA
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/dataprofessor/movies-explorer?quickstart=1)
-
-## Reference
-
-- [TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
+Gulf of Mexico: pandey-tushar.github.io/tamids24/
+Atlantic: pandey-tushar.github.io/tamids24/TDA
   
