@@ -76,10 +76,20 @@ def east_coast():
 
 
 #~~~~~~~~~~~~~~~~~~ Causal interference of the sea level rise ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-def interference():
-    st.title('Causal interference of the sea level rise')
+def network_analysis():
+    st.title('Relationship between different green house gas emissions and sea level rise')
     st.write(" ")
-    
+    st.write("""
+            We can go to the network analysis page by clicking
+            on the link. Below is a snapshot of the department-wise Grant
+            network analysis""")
+
+    #To access the network analysis, press the button below.
+
+    st.write("")
+    col1, col2, col3 = st.columns((1,1,1))
+    link = '[Green House emissions and sea level rise](https://pandey-tushar.github.io/tamids2024/)'
+    col2.markdown(link, unsafe_allow_html=True)
 
 
 
@@ -260,8 +270,8 @@ elif navigation_tab == 'Sea Levels on the east coast':
 
 
 # Second Page -
-elif navigation_tab == 'Causal interference of the sea level rise':
-    interference()
+elif navigation_tab == 'Green house emissions and sea level rise':
+    network_analysis()
 
 # Third Page -
 elif navigation_tab == 'Predicting Sea levels':
