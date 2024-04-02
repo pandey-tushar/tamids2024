@@ -12,6 +12,7 @@ This data app shows a simple demonstration of an interactive data explorer that 
 
 ## Websites for TDA
 
-Gulf of Mexico: pandey-tushar.github.io/tamids24/
-Atlantic: pandey-tushar.github.io/tamids24/TDA
+Gulf of Mexico: [pandey-tushar.github.io/tamids24/](pandey-tushar.github.io/tamids24/)
+
+Atlantic: [pandey-tushar.github.io/tamids24/TDA](pandey-tushar.github.io/tamids24/TDA)
   
