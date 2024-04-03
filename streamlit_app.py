@@ -4,6 +4,7 @@ import pandas as pd
 import altair as alt
 import streamlit.components.v1 as components
 import webbrowser
+from PIL import Image
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~ Home Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
