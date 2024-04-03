@@ -8,11 +8,15 @@ import webbrowser
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~ Home Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def home_page():
+    # Setting the title -
+    #st.title("TAMIDS Data Science Competition 2024")
 
     # Desription -
     st.markdown("""
                 <p style='text-align: justify;'>
-                The 2024 TAMIDS Data Science Competition is about sea level rising and its impact.
+                The 2024 TAMIDS Data Science Competition is about finding the
+                impact of sea level rise, the factors affecting sea level rise
+                and data driven solutions to restrict the negative impacts.
                 </p>
                 """, unsafe_allow_html=True)
 
@@ -22,7 +26,10 @@ def home_page():
              """)
     st.markdown("""
                 <p style='text-align: justify;'>
-            Prob stat
+            We’re tackling the challenge of using data-driven research to predict
+            and mitigate sea level rise (SLR). We aim to analyze the impacted
+            areas and provide actionable insights to guide decision-makers,
+            balancing precision with clear communication.
              </p>
                 """, unsafe_allow_html=True)
 
@@ -32,20 +39,30 @@ def home_page():
              """)
     st.markdown("""
                 <p style='text-align: justify;'>
-                 Data collec + prepro
+                 The analysis has been made on SLR and
+                 impacts of SLR. This also includes
+                 the factors affecting climate change
+                 as well as SLR impacts like the 
+                 Greenhouse gases
+                 <ul>
+                 <li> list item 1
+                 <li> list item 2 </ul>
                  </p>
                 """, unsafe_allow_html=True)
     
     
-    
     st.markdown("""
                 <p style='text-align: justify;'>
-             New para
+             The abstract keywords per department were calculated by using NLP algorithms on the dataset containing the 
+             abstracts of the publications using unigram, bigram and trigram to find the most frequently occurring sequential tokens. 
+             From the sequential tokens, the generic words were removed to formulate a clean corpus which was used to compute the four 
+             types of scores defined above.
              </p>
                 """, unsafe_allow_html=True)
     st.markdown("""
                 <p style='text-align: justify;'>
-             new paragraph
+             In order to have a better understanding of these metrics, a graphical representation per department was plotted which 
+             has been included in our website and a few of these plots have been shown below.
              </p>
                 """, unsafe_allow_html=True)
 
@@ -56,7 +73,10 @@ def home_page():
              """)
     st.markdown("""
                 <p style='text-align: justify;'>
-                New parag
+
+                * **Feature Engineering:** Data normalization explained
+                * **Unsupervised Learning:** Clustering based on different features of the data. Rather, with the mapper package, we see a better picture of our clusters which brings us to the visualizations.
+                * **Dynamic Visualization:** About TDA and other visualization. Therefore, the website we have designed is very dynamic and suitable for everyone.
              </p>
                 """, unsafe_allow_html=True)
 
