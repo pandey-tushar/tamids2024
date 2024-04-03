@@ -103,7 +103,7 @@ def network_analysis():
     st.write("""
             We can go to the network analysis page by clicking
             on the link. Below is a snapshot of the green house emissions and the sea level rise 
-            in the guld of Mexico""")
+            in the gulf of Mexico""")
 
     #To access the network analysis, press the button below.
 
@@ -121,7 +121,26 @@ def network_analysis():
 
     st.write(" ")
 
+    st.write("""
+            We can go to the network analysis page of the green house emissions and the sea level
+            rise in the Atlantic ocean as well.
+            """)
+    #To access the network analysis, press the button below.
 
+    st.write("")
+    col1, col2, col3 = st.columns((1,1,1))
+    link = '[Green House emissions and sea level rise in Atlantic Ocean](https://pandey-tushar.github.io/tamids24/)'
+    col2.markdown(link, unsafe_allow_html=True)
+
+    st.write(" ")
+    #Setting the Image
+    image = Image.open('Images/atlantic_TDA.jpg')
+
+    #Setting the image width
+    st.image(image, use_column_width = True)
+
+    st.write(" ")
+    
 
 #~~~~~~~~~~~~~~~~~ Predicting Sea levels ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def predicting_sea_level():
