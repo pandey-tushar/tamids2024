@@ -117,6 +117,10 @@ def home_page():
 def east_coast():
     st.title("Sea Levels on the east coast")
     st.write(" ")
+    #Getting the graph
+    HtmlFile = open(f"HTML/SLR_predictions.html",'r',encoding = 'utf-8')
+    source_code_2 = HtmlFile.read()
+    components.html(source_code_2,height = 200)
 
 
 # ~~~~~~~~~~~~~~~~~~ Causal interference of the sea level rise ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
