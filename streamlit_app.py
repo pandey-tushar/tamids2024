@@ -263,7 +263,7 @@ def authors():
                * **University:** Texas A&M University (Department of Mathematics)
                * **Degree:** PhD Student (2024)
                * **Email:** tusharp@tamu.edu
-               * **LinkedIn:** [linkedin.com/in/tushar-pandey1612/](https://www.linkedin.com/in/tushar-pandey1612/)
+               * **LinkedIn:** [linkedin.com/in/tushar-pandey1612/](https://www.linkedin.com/in/tpmath/)
                * **Github:** [github.com/pandey-tushar](https://github.com/pandey-tushar)
                """
     )
