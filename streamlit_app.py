@@ -117,6 +117,10 @@ def home_page():
 def east_coast():
     st.title("Sea Levels on the east coast")
     st.write(" ")
+    st.write("""Below is the sea level rise estimates averaged
+            over an year after using LSTM and SARIMAX model to
+            predict the future values until the year 2103.
+            """)
     #Getting the graph
     HtmlFile = open(f"HTML/SLR_predictions.html",'r',encoding = 'utf-8')
     source_code_2 = HtmlFile.read()
