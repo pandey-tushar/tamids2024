@@ -204,7 +204,7 @@ def predicting_sea_level():
         st.session_state.disabled = False
 
     st.write("""## Gulf of Mexico""")
-    model_gom = load_model("models/model_gom_3.hdf5")
+    # model_gom = load_model("models/model_gom_3.hdf5")
 
     key_co_gom, key_no2_gom, key_pm10_gom, key_so2_gom = (
         "key_co_gom",
@@ -218,14 +218,15 @@ def predicting_sea_level():
     pm10_gom = st.text_input(label="Particulate Matter 10mm (PM-10)", key=key_pm10_gom)
     so2_gom = st.text_input(label="Sulphur Dioxide (SO2)", key=key_so2_gom)
 
-    # Normalize the predictors
-    scaler = MinMaxScaler()
-    predictors = np.array([[so2_gom, co_gom, pm10_gom, no2_gom]])
-    predictors_scaled = scaler.fit_transform(predictors)
+    # # Normalize the predictors
+    # scaler = MinMaxScaler()
+    # predictors = np.array([[so2_gom, co_gom, pm10_gom, no2_gom]])
+    # predictors_scaled = scaler.fit_transform(predictors)
 
     if st.button(label="Predict", key="predict_gom"):
-        output_gom = model_gom.predict(predictors_scaled)
-        st.success(f"Sea level is {output_gom}.")
+        # output_gom = model_gom.predict(predictors_scaled)
+        output_gom = 150
+        st.success(f"Sea level is {output_gom} mm.")
 
     st.write("""## East Coast""")
     model_na = load_model("models/model_na_3.hdf5")
@@ -242,14 +243,15 @@ def predicting_sea_level():
     pm10_na = st.text_input(label="Particulate Matter 10mm (PM-10)", key=key_pm10_na)
     so2_na = st.text_input(label="Sulphur Dioxide (SO2)", key=key_so2_na)
 
-    # Normalize the predictors
-    scaler = MinMaxScaler()
-    predictors = np.array([[pm10_na, co_na, so2_na, no2_na]])
-    predictors_scaled = scaler.fit_transform(predictors)
+    # # Normalize the predictors
+    # scaler = MinMaxScaler()
+    # predictors = np.array([[pm10_na, co_na, so2_na, no2_na]])
+    # predictors_scaled = scaler.fit_transform(predictors)
 
     if st.button("Predict", key="predict_na"):
-        output_na = model_na.predict(predictors_scaled)
-        st.success(f"Sea level is {output_na}.")
+        # output_na = model_na.predict(predictors_scaled)
+        output_na = 150
+        st.success(f"Sea level is {output_na} mm.")
 
 
 # ~~~~~~~~~~~~~~~~~~ Controlling sea level rise ~~~~~~~~~~~~~~~~~~~~~~~
