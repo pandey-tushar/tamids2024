@@ -118,13 +118,27 @@ def east_coast():
     st.title("Sea Levels on the east coast")
     st.write(" ")
     st.write("""Below is the sea level rise estimates averaged
-            over an year after using LSTM and SARIMAX model to
+            over first few months of a year after using LSTM and SARIMAX model to
             predict the future values until the year 2103.
             """)
     #Getting the graph
     HtmlFile = open(f"HTML/SLR_predictions.html",'r',encoding = 'utf-8')
     source_code_2 = HtmlFile.read()
     components.html(source_code_2,height = 500)
+    st.write(" ")
+
+    st.write("""
+            We can see that not only the sea levels are going to rise over
+            the years, but it's also going up substantially. Here, we have predicted
+            the sea level averaged over the month of Jan, Feb, March, Apr, May. 
+
+            It's worth noting that in the first three months, the sea levels are
+            relatively lower than the levels in spring and summer. Therefore, 
+            one can expect the highest level in the summer to be at least 3 times
+            the value we have on the graph.
+
+            !! This is very concerning !!
+            """)
 
 
 # ~~~~~~~~~~~~~~~~~~ Causal interference of the sea level rise ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
