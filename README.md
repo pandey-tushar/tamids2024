@@ -14,5 +14,5 @@ This data app shows a simple demonstration of an interactive data explorer that 
 
 Gulf of Mexico: [pandey-tushar.github.io/tamids2024/](https://pandey-tushar.github.io/tamids2024/)
 
-Atlantic: [pandey-tushar.github.io/tamids24]((https://pandey-tushar.github.io/tamids24/))
+Atlantic: [pandey-tushar.github.io/tamids24](https://pandey-tushar.github.io/tamids24/)
   
