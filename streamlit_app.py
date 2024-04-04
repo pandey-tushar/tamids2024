@@ -1,6 +1,11 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense, Dropout, BatchNormalization
+from tensorflow.keras.callbacks import EarlyStopping
+from tensorflow.keras.models import load_model
+from sklearn.preprocessing import MinMaxScaler
 import altair as alt
 import streamlit.components.v1 as components
 import webbrowser
@@ -10,35 +15,46 @@ from PIL import Image
 # ~~~~~~~~~~~~~~~~~~~~~~~~ Home Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def home_page():
     # Setting the title -
-    #st.title("TAMIDS Data Science Competition 2024")
+    # st.title("TAMIDS Data Science Competition 2024")
 
     # Desription -
-    st.markdown("""
+    st.markdown(
+        """
                 <p style='text-align: justify;'>
                 The 2024 TAMIDS Data Science Competition is about finding the
                 impact of sea level rise, the factors affecting sea level rise
                 and data driven solutions to restrict the negative impacts.
                 </p>
-                """, unsafe_allow_html=True)
+                """,
+        unsafe_allow_html=True,
+    )
 
     # Problem Statement -
-    st.write("""
+    st.write(
+        """
              ## Problem Statement
-             """)
-    st.markdown("""
+             """
+    )
+    st.markdown(
+        """
                 <p style='text-align: justify;'>
             We’re tackling the challenge of using data-driven research to predict
             and mitigate sea level rise (SLR). We aim to analyze the impacted
             areas and provide actionable insights to guide decision-makers,
             balancing precision with clear communication.
              </p>
-                """, unsafe_allow_html=True)
+                """,
+        unsafe_allow_html=True,
+    )
 
     # Data Collection and Pre-processing -
-    st.write("""
+    st.write(
+        """
              ## Data Collection and Pre-processing
-             """)
-    st.markdown("""
+             """
+    )
+    st.markdown(
+        """
                 <p style='text-align: justify;'>
                  The analysis has been made on SLR and
                  impacts of SLR. This also includes
@@ -49,124 +65,185 @@ def home_page():
                  <li> list item 1
                  <li> list item 2 </ul>
                  </p>
-                """, unsafe_allow_html=True)
-    
-    
-    st.markdown("""
+                """,
+        unsafe_allow_html=True,
+    )
+
+    st.markdown(
+        """
                 <p style='text-align: justify;'>
              The abstract keywords per department were calculated by using NLP algorithms on the dataset containing the 
              abstracts of the publications using unigram, bigram and trigram to find the most frequently occurring sequential tokens. 
              From the sequential tokens, the generic words were removed to formulate a clean corpus which was used to compute the four 
              types of scores defined above.
              </p>
-                """, unsafe_allow_html=True)
-    st.markdown("""
+                """,
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        """
                 <p style='text-align: justify;'>
              In order to have a better understanding of these metrics, a graphical representation per department was plotted which 
              has been included in our website and a few of these plots have been shown below.
              </p>
-                """, unsafe_allow_html=True)
+                """,
+        unsafe_allow_html=True,
+    )
 
-    
     # Overview -
-    st.write("""
+    st.write(
+        """
              ## Methodology
-             """)
-    st.markdown("""
+             """
+    )
+    st.markdown(
+        """
                 <p style='text-align: justify;'>
 
                 * **Feature Engineering:** Data normalization explained
                 * **Unsupervised Learning:** Clustering based on different features of the data. Rather, with the mapper package, we see a better picture of our clusters which brings us to the visualizations.
                 * **Dynamic Visualization:** About TDA and other visualization. Therefore, the website we have designed is very dynamic and suitable for everyone.
              </p>
-                """, unsafe_allow_html=True)
+                """,
+        unsafe_allow_html=True,
+    )
 
     # Navigation -
     st.write("")
     st.info("Please navigate using the select box in the sidebar on the left.")
 
 
-
-
-#------------------ Sea Levels on the east coast  -------------------------
+# ------------------ Sea Levels on the east coast  -------------------------
 def east_coast():
-    st.title('Sea Levels on the east coast')
+    st.title("Sea Levels on the east coast")
     st.write(" ")
 
 
-
-
-#~~~~~~~~~~~~~~~~~~ Causal interference of the sea level rise ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~ Causal interference of the sea level rise ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def network_analysis():
-    st.title('Relationship between different green house gas emissions and sea level rise')
+    st.title(
+        "Relationship between different green house gas emissions and sea level rise"
+    )
     st.write(" ")
-    st.write("""
+    st.write(
+        """
             We can go to the network analysis page by clicking
             on the link. Below is a snapshot of the green house emissions and the sea level rise 
-            in the gulf of Mexico""")
+            in the gulf of Mexico"""
+    )
 
-    #To access the network analysis, press the button below.
+    # To access the network analysis, press the button below.
 
     st.write("")
-    col1, col2, col3 = st.columns((1,1,1))
-    link = '[Green House emissions and sea level rise in Gulf of Mexico](https://pandey-tushar.github.io/tamids2024/)'
+    col1, col2, col3 = st.columns((1, 1, 1))
+    link = "[Green House emissions and sea level rise in Gulf of Mexico](https://pandey-tushar.github.io/tamids2024/)"
     col2.markdown(link, unsafe_allow_html=True)
 
     st.write(" ")
-    #Setting the Image
-    image = Image.open('Images/gulf_of_mexico_TDA.jpg')
+    # Setting the Image
+    image = Image.open("Images/gulf_of_mexico_TDA.jpg")
 
-    #Setting the image width
-    st.image(image, use_column_width = True)
+    # Setting the image width
+    st.image(image, use_column_width=True)
 
     st.write(" ")
 
-    st.write("""
+    st.write(
+        """
             We can go to the network analysis page of the green house emissions and the sea level
             rise in the Atlantic ocean as well.
-            """)
-    #To access the network analysis, press the button below.
+            """
+    )
+    # To access the network analysis, press the button below.
 
     st.write("")
-    col1, col2, col3 = st.columns((1,1,1))
-    link = '[Green House emissions and sea level rise in Atlantic Ocean](https://pandey-tushar.github.io/tamids24/)'
+    col1, col2, col3 = st.columns((1, 1, 1))
+    link = "[Green House emissions and sea level rise in Atlantic Ocean](https://pandey-tushar.github.io/tamids24/)"
     col2.markdown(link, unsafe_allow_html=True)
 
     st.write(" ")
-    #Setting the Image
-    image = Image.open('Images/atlantic_TDA.jpg')
+    # Setting the Image
+    image = Image.open("Images/atlantic_TDA.jpg")
 
-    #Setting the image width
-    st.image(image, use_column_width = True)
+    # Setting the image width
+    st.image(image, use_column_width=True)
 
     st.write(" ")
-    
 
-#~~~~~~~~~~~~~~~~~ Predicting Sea levels ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# ~~~~~~~~~~~~~~~~~ Predicting Sea levels ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def predicting_sea_level():
-    st.title('Predicting Sea levels')
+
+    st.title("Predicting Sea levels")
     st.write(" ")
-    
+
+    if "visibility" not in st.session_state:
+        st.session_state.visibility = "visible"
+        st.session_state.disabled = False
+
+    st.write("""## Gulf of Mexico""")
+    model_gom = load_model("models/model_gom_3.hdf5")
+
+    key_co_gom, key_no2_gom, key_pm10_gom, key_so2_gom = (
+        "key_co_gom",
+        "key_no2_gom",
+        "key_pm10_gom",
+        "key_so2_gom",
+    )
+
+    co_gom = st.text_input(label="Carbon Monoxide (CO)", key=key_co_gom)
+    no2_gom = st.text_input(label="Nitrogen Dioxide (NO2)", key=key_no2_gom)
+    pm10_gom = st.text_input(label="Particulate Matter 10mm (PM-10)", key=key_pm10_gom)
+    so2_gom = st.text_input(label="Sulphur Dioxide (SO2)", key=key_so2_gom)
+
+    # Normalize the predictors
+    scaler = MinMaxScaler()
+    predictors = np.array([[so2_gom, co_gom, pm10_gom, no2_gom]])
+    predictors_scaled = scaler.fit_transform(predictors)
+
+    if st.button(label="Predict", key="predict_gom"):
+        output_gom = model_gom.predict(predictors_scaled)
+        st.success(f"Sea level is {output_gom}.")
+
+    st.write("""## East Coast""")
+    model_na = load_model("models/model_na_3.hdf5")
+
+    key_co_na, key_no2_na, key_pm10_na, key_so2_na = (
+        "key_co_na",
+        "key_no2_na",
+        "key_pm10_na",
+        "key_so2_na",
+    )
+
+    co_na = st.text_input(label="Carbon Monoxide (CO)", key=key_co_na)
+    no2_na = st.text_input(label="Nitrogen Dioxide (NO2)", key=key_no2_na)
+    pm10_na = st.text_input(label="Particulate Matter 10mm (PM-10)", key=key_pm10_na)
+    so2_na = st.text_input(label="Sulphur Dioxide (SO2)", key=key_so2_na)
+
+    # Normalize the predictors
+    scaler = MinMaxScaler()
+    predictors = np.array([[pm10_na, co_na, so2_na, no2_na]])
+    predictors_scaled = scaler.fit_transform(predictors)
+
+    if st.button("Predict", key="predict_na"):
+        output_na = model_na.predict(predictors_scaled)
+        st.success(f"Sea level is {output_na}.")
 
 
-#~~~~~~~~~~~~~~~~~~ Controlling sea level rise ~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~ Controlling sea level rise ~~~~~~~~~~~~~~~~~~~~~~~
 def control_the_rise():
-    st.title('Controlling sea level rise')
+    st.title("Controlling sea level rise")
     st.write(" ")
-    
 
 
-
-
-#------------------ About the Authors -------------------------
+# ------------------ About the Authors -------------------------
 def authors():
     # Setting the title -
     st.title("About the Authors")
     st.write(" ")
 
-
     # Dividing screen into 2 parts -
-    col1, col2, col3 = st.columns((0.75,0.1,2))
+    col1, col2, col3 = st.columns((0.75, 0.1, 2))
 
     # # Setting the image -
     # image = Image.open('Images/tushar.png')
@@ -179,7 +256,8 @@ def authors():
     col3.write("## Tushar Pandey")
 
     # About section -
-    col3.write("""
+    col3.write(
+        """
                Research Area: Quantum Topology
 
                * **University:** Texas A&M University (Department of Mathematics)
@@ -187,11 +265,12 @@ def authors():
                * **Email:** tusharp@tamu.edu
                * **LinkedIn:** [linkedin.com/in/tushar-pandey1612/](https://www.linkedin.com/in/tushar-pandey1612/)
                * **Github:** [github.com/pandey-tushar](https://github.com/pandey-tushar)
-               """)
+               """
+    )
     st.write("")
 
     # Dividing screen into 2 parts -
-    col1, col2, col3 = st.columns((0.75,0.1,2))
+    col1, col2, col3 = st.columns((0.75, 0.1, 2))
 
     # # Setting the image -
     # image = Image.open('Images/sambandh.png')
@@ -205,7 +284,8 @@ def authors():
     col3.write("## Sambandh Dhal")
 
     # About section -
-    col3.write("""
+    col3.write(
+        """
                Research Area: Error Estimation and Machine Learning.
 
                * **University:** Texas A&M University (Department of Electrical and Computer Engineering)
@@ -213,11 +293,12 @@ def authors():
                * **Email:** sambandh@tamu.edu
                * **LinkedIn:** [linkedin.com/in/sambandh-dhal9163/](https://www.linkedin.com/in/sambandh-dhal9163/)
                * **Github:** [github.com/Sambandh](https://github.com/Sambandh)
-               """)
+               """
+    )
     st.write("")
 
     # Dividing screen into 2 parts -
-    col1, col2, col3 = st.columns((0.75,0.1,2))
+    col1, col2, col3 = st.columns((0.75, 0.1, 2))
 
     # Setting the image -
     # image = Image.open('Images/Abhijeet.png')
@@ -231,7 +312,8 @@ def authors():
     col3.write("## Vivek")
 
     # About section -
-    col3.write("""
+    col3.write(
+        """
                Research Area: 
 
                * **University:** Texas A&M University ()
@@ -239,10 +321,11 @@ def authors():
                * **Email:** 
                * **LinkedIn:** []()
                * **Github:** []()
-               """)
+               """
+    )
     st.write("")
     # Dividing screen into 2 parts -
-    col1, col2, col3 = st.columns((0.75,0.1,2))
+    col1, col2, col3 = st.columns((0.75, 0.1, 2))
 
     # # Setting the image -
     # image = Image.open('Images/swarnabha.png')
@@ -256,7 +339,8 @@ def authors():
     col3.write("## Rishabh")
 
     # About section -
-    col3.write("""
+    col3.write(
+        """
                Research Area: .
 
                * **University:** Texas A&M University ()
@@ -264,11 +348,12 @@ def authors():
                * **Email:** 
                * **LinkedIn:** []()
                * **Github:** []()
-               """)
+               """
+    )
     st.write("")
 
     # Dividing screen into 2 parts -
-    col1, col2, col3 = st.columns((0.75,0.1,2))
+    col1, col2, col3 = st.columns((0.75, 0.1, 2))
 
     # # Setting the image -
     # image = Image.open('Images/dd.png')
@@ -282,7 +367,8 @@ def authors():
     col3.write("## Sheel")
 
     # About section -
-    col3.write("""
+    col3.write(
+        """
                Research Area: 
 
                * **University:** Texas A&M University ()
@@ -290,46 +376,55 @@ def authors():
                * **Email:** 
                * **LinkedIn:** []()
                * **Github:** []()
-               """)
+               """
+    )
     st.write("")
 
 
 # Page title
-st.set_page_config(layout='wide', page_title="Sea Level Rising and it's impact", page_icon='🌊')
-st.set_option('deprecation.showPyplotGlobalUse', False)
-
+st.set_page_config(
+    layout="wide", page_title="Sea Level Rising and it's impact", page_icon="🌊"
+)
+st.set_option("deprecation.showPyplotGlobalUse", False)
 
 
 # Sidebar navigation for users -
-st.sidebar.header('Navigation tab')
-navigation_tab = st.sidebar.selectbox('Choose a tab', ('Home-Page',
- 'Sea Levels on the east coast','Green house emissions and sea level rise', 'Predicting Sea levels',
- 'Controlling sea level rise', 'About the Authors'))
+st.sidebar.header("Navigation tab")
+navigation_tab = st.sidebar.selectbox(
+    "Choose a tab",
+    (
+        "Home-Page",
+        "Sea Levels on the east coast",
+        "Green house emissions and sea level rise",
+        "Predicting Sea levels",
+        "Controlling sea level rise",
+        "About the Authors",
+    ),
+)
 
 # Displaying pages according to the selection -
 
 # Home page -
-if navigation_tab == 'Home-Page':
+if navigation_tab == "Home-Page":
     home_page()
 
 # First page -
-elif navigation_tab == 'Sea Levels on the east coast':
+elif navigation_tab == "Sea Levels on the east coast":
     east_coast()
 
 
 # Second Page -
-elif navigation_tab == 'Green house emissions and sea level rise':
+elif navigation_tab == "Green house emissions and sea level rise":
     network_analysis()
 
 # Third Page -
-elif navigation_tab == 'Predicting Sea levels':
+elif navigation_tab == "Predicting Sea levels":
     predicting_sea_level()
 
 # Fourth Page -
-elif navigation_tab == 'Controlling sea level rise':
+elif navigation_tab == "Controlling sea level rise":
     control_the_rise()
 
 # About Page -
-elif navigation_tab == 'About the Authors':
+elif navigation_tab == "About the Authors":
     authors()
-
