@@ -320,13 +320,30 @@ def impact_slr():
     st.title("Impacts of SLR")
     st.write(" ")
 
-    st.markdown("""
-                <p>
-                * **abc**: gasga
-                </p>
+    st.write(
+        """
+             ## Problem Statement
+             """
+    )
+    st.markdown(
+        """
+                <p style='text-align: justify;'>
+            In this competition, we are tasked with analyzing historical
+            data regarding sea level rise and the impact of human activities
+            on climate systems.The goal is to identify patterns and trends
+            using predictive models to understand patterns in sea level rise
+            and consequently comprehend the impact due to sea level rise in
+            terms of. We work to map communities most affected by these changes. 
+
+            Additionally, it's worthwile to monitor real-time environmental changes.
+            The stretch goal beyond this competition is to leverage data-driven
+            approaches to enhance our predictive capabilities and management
+            strategies for mitigating the impact of climate change on human
+            communities and natural resources.
+             </p>
                 """,
-                unsafe_allow_html = True,
-               )
+        unsafe_allow_html=True,
+    )
 
 
 # ~~~~~~~~~~~~~~~~~~ Controlling sea level rise ~~~~~~~~~~~~~~~~~~~~~~~
