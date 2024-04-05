@@ -379,7 +379,7 @@ def impacts_slr():
     )
     st.markdown(
         """
-                <p style='text-align: justify;'>
+                <p>
                 * **BOD and DO:** Sea level rise indirectly impacts 
                 biological oxygen demand (BOD) and dissolved oxygen(DO) through various 
                 factors such as increased organic matter input from erosion, altered 
