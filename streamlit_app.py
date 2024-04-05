@@ -428,7 +428,7 @@ def predicting_sea_level():
 
     if st.button("Predict", key="predict_na"):
         output_na = model_na.predict(predictors_scaled)[0][0] * (140.21 + 79.27) - 79.27
-        st.success(f"Sea level is {output_na + 30:.2f} mm.")
+        st.success(f"Sea level is {output_na:.2f} mm.")
 
 
 # ~~~~~~~~~~~~~~~~~~ Controlling sea level rise ~~~~~~~~~~~~~~~~~~~~~~~
