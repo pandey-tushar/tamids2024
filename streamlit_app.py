@@ -222,7 +222,7 @@ def network_analysis():
 
     st.write(" ")
 
-    st.write("""
+    st.markdown("""
             <p>
             In this dynamic visualization, we have a few parameters that are
             adjustable to the user. We can color the nodes using different features,
@@ -239,7 +239,8 @@ def network_analysis():
             Mexico. This provides us with an amazing overview of the relationship 
             between levels of pollutants and SLR over different years and decades. 
             </p>
-            """)
+            """,
+        unsafe_allow_html=True,)
 
 
 # ~~~~~~~~~~~~~~~~~ Predicting Sea levels ~~~~~~~~~~~~~~~~~~~~~~~~~~~
