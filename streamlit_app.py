@@ -337,18 +337,18 @@ def authors():
     # col1.image(image, use_column_width=True)
 
     # Vivek -
-    col3.write("## Vivek")
+    col3.write("## Vivekvardhan Kesireddy")
 
     # About section -
     col3.write(
         """
-               Research Area: 
+               Research Area: Drilling Automation
 
-               * **University:** Texas A&M University ()
-               * **Degree:** PhD Student (Engineering)
-               * **Email:** 
-               * **LinkedIn:** []()
-               * **Github:** []()
+               * **University:** Texas A&M University
+               * **Degree:** PhD Student (Petroleum Engineering)
+               * **Email:** vkesireddy@tamu.edu
+               * **LinkedIn:** [linkedin.com/in/vivekkesireddy/](https://www.linkedin.com/in/vivekkesireddy/)
+               * **Github:** [github.com/vivekkesireddy](https://github.com/vivekkesireddy)
                """
     )
     st.write("")
@@ -364,18 +364,18 @@ def authors():
     # col1.image(image, use_column_width=True)
 
     # Rishabh -
-    col3.write("## Rishabh")
+    col3.write("## Rishabh Singh")
 
     # About section -
     col3.write(
         """
-               Research Area: .
+               Research Area: Soil carbon, Climate smart agriculture
 
                * **University:** Texas A&M University ()
-               * **Degree:** PhD Student ( Engineering)
-               * **Email:** 
-               * **LinkedIn:** [linkedin.com/in/sheelabhadra/](https://www.linkedin.com/in/sheelabhadra/)
-               * **Github:** [github.com/sheelabhadra](https://github.com/sheelabhadra)
+               * **Degree:** PhD Student (Biological and Agricultural Engineering)
+               * **Email:** irishabh1996@tamu.edu
+               * **LinkedIn:** [www.linkedin.com/in/rishabh2996/](https://www.linkedin.com/in/rishabh2996/)
+               * **Github:** [github.com/irishabh-96](https://github.com/irishabh-96)
                """
     )
     st.write("")
@@ -402,8 +402,8 @@ def authors():
                * **University:** Texas A&M University
                * **Degree:** PhD Student (Computer Science)
                * **Email:** sheelabhadra@tamu.edu
-               * **LinkedIn:** []()
-               * **Github:** []()
+               * **LinkedIn:** [linkedin.com/in/sheelabhadra/](https://www.linkedin.com/in/sheelabhadra/)
+               * **Github:** [github.com/sheelabhadra](https://github.com/sheelabhadra)
                """
     )
     st.write("")
