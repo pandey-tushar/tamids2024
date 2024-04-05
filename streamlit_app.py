@@ -437,10 +437,17 @@ def predicting_sea_level():
 
 
 # ~~~~~~~~~~~~~~~~~~ Controlling sea level rise ~~~~~~~~~~~~~~~~~~~~~~~
-def effects_slr():
+def impacts_slr():
     st.title("Impacts of SLR")
     st.write(" ")
-
+    
+    
+    st.write(" ")
+    # Getting the graph
+    HtmlFile = open(f"HTML/Tourism_GDP_Percentage.html", "r", encoding="utf-8")
+    source_code_2 = HtmlFile.read()
+    components.html(source_code_2, height=500)
+    st.write(" ")
 
 # ------------------ About the Authors -------------------------
 def authors():
@@ -629,7 +636,7 @@ elif navigation_tab == "Predicting Sea levels":
 
 # Fourth Page -
 elif navigation_tab == "Impacts of SLR":
-    effects_slr()
+    impacts_slr()
 
 # About Page -
 elif navigation_tab == "About the Authors":
