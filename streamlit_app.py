@@ -495,6 +495,15 @@ def effects_slr():
                 """,
         unsafe_allow_html = True,
     )
+
+    st.write(" ")
+    # Setting the Image
+    image = Image.open("Images/projected_conductivity.jpg")
+
+    # Setting the image width
+    st.image(image, use_column_width=True)
+
+    st.write(" ")
     st.write(
         """
             ## Dissolved Oxygen
@@ -522,6 +531,14 @@ def effects_slr():
                 """,
         unsafe_allow_html = True,
     )
+    st.write(" ")
+    # Setting the Image
+    image = Image.open("Images/dissolved_oxygen.jpg")
+
+    # Setting the image width
+    st.image(image, use_column_width=True)
+
+    st.write(" ")
 
 
 # ------------------ About the Authors -------------------------
