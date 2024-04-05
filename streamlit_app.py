@@ -64,6 +64,7 @@ def home_page():
     st.markdown(
         """
                 <p style='text-align: justify;'>
+                
                  * **Area of interest:** The study area comprises the states of Texas, Louisiana, Mississippi,
                  Alabama, Florida, Georgia, North Carolina, South Carolina, Virginia,
                  Delaware, New Jersey, New York, Connecticut, Rhode Island,
@@ -73,8 +74,7 @@ def home_page():
                  the most vulnerable to the effects of sea level rise, with a total
                  population of almost 300 million living along the coasts of the globe,
                  including 20 of the 33 megacities
-                 </p>
-                 <p style='text-align: justify;'>
+                 
                  * **SLR Data:** Sea level rise data was acquired from National Oceanic and Atmospheric
                  Administration’s (NOAA)/NESDIS/STAR Laboratory for Satellite Altimetry
                  website for sea level data (NOAA/NESDIS/STAR). The program processing
@@ -82,8 +82,7 @@ def home_page():
                  Copernicus missions (Sentinel-6A and Sentinel-3A) as well as other
                  collaboration opportunity missions (Jason-3 and Topex/Poseidon). The
                  dataset was obtained for the period 1993-2023.
-                 </p>
-                 <p style='text-align: justify;'>
+                 
                  * **Effects of SLR:** The Coastal Data and Analysis Tool for Water Resources Management
                  (CDAT-WRM) supplied data related to specific conductance for
                  investigations that included coastal water management-related
@@ -91,8 +90,7 @@ def home_page():
                  Geological Survey websites, the Water Level and Salinity Analysis
                  Mapper (U.S. Geological Survey, 2021a) and the Coastal Salinity
                  Index (U.S. Geological Survey, 2021b).
-                 </p>
-                 <p style='text-align: justify;'>
+                 
                  * **Dissolved Oxygen:** Globally gridded dataset of DO in surface water for the period
                  1993-2010, monthly observations was downloaded from The World Bank
                  Data Catalog (World Bank Data Catalog) for the Chesapeake Bay,
