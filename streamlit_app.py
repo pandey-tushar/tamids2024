@@ -20,7 +20,13 @@ from PIL import Image
 def home_page():
     # Setting the title -
     # st.title("TAMIDS Data Science Competition 2024")
+    # Setting the Image
+    image = Image.open("Images/Extreme-Sea-Level-Rise-scaled.jpg")
 
+    # Setting the image width
+    st.image(image, use_column_width=True)
+
+    st.write(" ")
     # Desription -
     st.markdown(
         """
