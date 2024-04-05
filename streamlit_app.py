@@ -371,8 +371,8 @@ def predicting_sea_level():
 
 
 # ~~~~~~~~~~~~~~~~~~ Controlling sea level rise ~~~~~~~~~~~~~~~~~~~~~~~
-def control_the_rise():
-    st.title("Controlling sea level rise")
+def effects_slr():
+    st.title("Effects of SLR")
     st.write(" ")
 
 
@@ -537,7 +537,7 @@ navigation_tab = st.sidebar.selectbox(
         "Exploring the data",
         "Green house emissions and sea level rise",
         "Predicting Sea levels",
-        "Controlling sea level rise",
+        "Effects of SLR",
         "About the Authors",
     ),
 )
@@ -562,8 +562,8 @@ elif navigation_tab == "Predicting Sea levels":
     predicting_sea_level()
 
 # Fourth Page -
-elif navigation_tab == "Controlling sea level rise":
-    control_the_rise()
+elif navigation_tab == "Effects of SLR":
+    effects_slr()
 
 # About Page -
 elif navigation_tab == "About the Authors":
