@@ -380,6 +380,7 @@ def impacts_slr():
     st.markdown(
         """
                 <p>
+                
                 * **BOD and DO:** Sea level rise indirectly impacts 
                 biological oxygen demand (BOD) and dissolved oxygen(DO) through various 
                 factors such as increased organic matter input from erosion, altered 
@@ -396,7 +397,7 @@ def impacts_slr():
                 <li> Moderate Water Quality: DO levels between 3 mg/L and 8 mg/L may indicate moderate pollution.
                 <li> Poor Water Quality: DO levels below 3 mg/L suggest poor water quality and significant pollution.
                 </ul>
-        </p>
+                </p>
                 """,
         unsafe_allow_html = True,
     )
