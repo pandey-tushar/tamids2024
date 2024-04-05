@@ -289,7 +289,30 @@ def network_analysis():
             </p>
             """,
         unsafe_allow_html=True,)
-
+    
+    st.write(" ")
+    st.markdown("""   
+                <p>
+                We look at different GDP percentages for different states for Total Ocean GDP. 
+                In this figure to the left, we see that the GDP percentage coming from the ocean 
+                economy is declining for the state of South Carolina. While there can be multiple
+                reasons for this trend, a few of them are salinity in the water and reduced biomass
+                index. This is one of the reasons why we considered the different aspects, as 
+                indicators, of the effects of SLR. We do the same plot for four different types of 
+                GDPs, namely Ocean, Marine construction, marine transportation, and tourism 
+                contributions towards the GDP of the state. We make a graph using plotly for 
+                different states for all four GDPs. 
+                </p>
+                """,
+        unsafe_allow_html = True,
+    )
+    
+    st.write(" ")
+    # Getting the graph
+    HtmlFile = open(f"HTML/Tourism_GDP_Percentage.html", "r", encoding="utf-8")
+    source_code_2 = HtmlFile.read()
+    components.html(source_code_2, height=500)
+    st.write(" ")
 
 
 
@@ -404,30 +427,7 @@ def impacts_slr():
     # Setting the image width
     st.image(image, use_column_width=True)
 
-    st.write(" ")
-    st.markdown(
-        """    
-                <p style = 'text-align:justify;'>
-                We look at different GDP percentages for different states for Total Ocean GDP. 
-                In this figure to the left, we see that the GDP percentage coming from the ocean 
-                economy is declining for the state of South Carolina. While there can be multiple
-                reasons for this trend, a few of them are salinity in the water and reduced biomass
-                index. This is one of the reasons why we considered the different aspects, as 
-                indicators, of the effects of SLR. We do the same plot for four different types of 
-                GDPs, namely Ocean, Marine construction, marine transportation, and tourism 
-                contributions towards the GDP of the state. We make a graph using plotly for 
-                different states for all four GDPs. 
-                </p>
-                """,
-        unsafe_allow_html = True,
-    )
     
-    st.write(" ")
-    # Getting the graph
-    HtmlFile = open(f"HTML/Tourism_GDP_Percentage.html", "r", encoding="utf-8")
-    source_code_2 = HtmlFile.read()
-    components.html(source_code_2, height=500)
-    st.write(" ")
 
 
 # ~~~~~~~~~~~~~~~~~ Predicting Sea levels ~~~~~~~~~~~~~~~~~~~~~~~~~~~
