@@ -449,8 +449,7 @@ def effects_slr():
         adaptation is shaped by the salinity of their surroundings.
         Certain species, such as sea stars and sea cucumbers, are 
         intolerant of low salinity levels and are typically absent from
-        many estuaries. Additionally, some aquatic organisms are sensitive
-        to the specific ionic composition of water. 
+        many estuaries.
         The tolerance of organisms to salinity depends on their osmotic
         processes. Freshwater organisms, characterized by low conductivity,
         are hyperosmotic, meaning they can expel water and retain ions, 
@@ -466,15 +465,63 @@ def effects_slr():
         lead to soil salinity, adversely affecting plant water uptake and
         leading to reduced crop yields. Conversely, low soil EC might 
         suggest a lack of nutrients, necessitating fertilization for 
-        optimal plant growth. Precision agriculture leverages soil EC 
-        measurements to map field variability, enabling targeted 
-        management practices that can enhance crop production 
-        efficiency and sustainability. 
+        optimal plant growth. 
+        * **Drinking Water:** High conductivity levels, resulting 
+        from elevated concentrations of dissolved salts and minerals,
+        can lead to water tasting salty, which may discourage consumption
+        and lead to dehydration or the consumption of less healthy 
+        alternatives. More critically, certain dissolved ions, such as
+        sodium and chloride, at high concentrations can pose health risks,
+        particularly for individuals with hypertension or heart disease,
+        as they can exacerbate these conditions. The World Health 
+        Organization (WHO) has established guidelines for the maximum
+        concentrations of various dissolved ions in drinking water to 
+        safeguard public health. Ensuring that drinking water meets these
+        guidelines requires monitoring and potentially treating water to 
+        remove excess salts, which can be costly but is essential for 
+        maintaining the health and well-being of communities.
+        * **Infrastructure:** The impact of conductivity/salinity in 
+        water on infrastructure is significant and multifaceted. 
+        High levels of salinity in water can lead to corrosion and
+        deterioration of infrastructure materials, including metals 
+        and concrete. For instance, salt accelerates
+        steel reinforcement corrosion in concrete, a process known as 
+        chloride-induced corrosion, which is a major concern for coastal
+        and marine structures. Additionally, salinity can affect the
+        efficiency of water treatment plants by increasing the cost 
+        and complexity of water purification processes, as highlighted
+        by the United States Geological Survey (USGS, 2016). 
         </p>
         """,
         unsafe_allow_html = True,
     )
-        
+    st.write(
+        """
+        ## Dissolved Oxygen
+        """
+    )
+    st.markdown(
+        """
+        <p style='text-align: justify;'>
+        * **BOD and DO:** Sea level rise indirectly impacts 
+        biological oxygen demand (BOD) and dissolved oxygen(DO) through various 
+        factors such as increased organic matter input from erosion, altered 
+        hydrology affecting nutrient dynamics, habitat loss or shifts, changes
+        in salinity, nutrient loading, and the promotion of hypoxic/anoxic 
+        conditions. These effects can lead to lower dissolved oxygen levels,
+        harming aquatic life and ecosystem health in coastal areas. 
+        Understanding these interactions is crucial for managing the 
+        consequences of sea level rise on water quality and coastal environments.
+        * **Reference Levels:** 
+        <ul>
+        <li> Dissolved Oxygen(DO) levels above 8 mg/L are considered indicative of good water quality.
+        <li> Moderate Water Quality: DO levels between 3 mg/L and 8 mg/L may indicate moderate pollution.
+        <li> Poor Water Quality: DO levels below 3 mg/L suggest poor water quality and significant pollution.
+        </ul>
+        </p>
+        """,
+        unsafe_allow_html = True,
+    )
 
 
 # ------------------ About the Authors -------------------------
