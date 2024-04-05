@@ -433,8 +433,37 @@ def predicting_sea_level():
 
 # ~~~~~~~~~~~~~~~~~~ Controlling sea level rise ~~~~~~~~~~~~~~~~~~~~~~~
 def effects_slr():
-    st.title("Effects of SLR")
+    st.title("Impacts of SLR")
     st.write(" ")
+
+    st.write(
+        """
+        ## Conductivity
+        """
+    )
+    st.markdown(
+        """
+        <p style='text-align: justify;'>
+        * **Freshwater Aquatic Ecosystem:** Most aquatic organisms have a 
+        specific range of salinity they can tolerate. Their physiological 
+        adaptation is shaped by the salinity of their surroundings.
+        Certain species, such as sea stars and sea cucumbers, are 
+        intolerant of low salinity levels and are typically absent from
+        many estuaries. Additionally, some aquatic organisms are sensitive
+        to the specific ionic composition of water. 
+        The tolerance of organisms to salinity depends on their osmotic
+        processes. Freshwater organisms, characterized by low conductivity,
+        are hyperosmotic, meaning they can expel water and retain ions, 
+        maintaining higher internal ionic concentrations than the 
+        surrounding water. Any alteration in the conductivity of the 
+        environment, such as changes in salt levels or types of ions, 
+        can negatively impact the metabolic functions of these organisms.
+
+        </p>
+        """,
+        unsafe_allow_html = True,
+    )
+        
 
 
 # ------------------ About the Authors -------------------------
@@ -598,7 +627,7 @@ navigation_tab = st.sidebar.selectbox(
         "Exploring the data",
         "Green house emissions and sea level rise",
         "Predicting Sea levels",
-        "Effects of SLR",
+        "Impacts of SLR",
         "About the Authors",
     ),
 )
@@ -623,7 +652,7 @@ elif navigation_tab == "Predicting Sea levels":
     predicting_sea_level()
 
 # Fourth Page -
-elif navigation_tab == "Effects of SLR":
+elif navigation_tab == "Impacts of SLR":
     effects_slr()
 
 # About Page -
