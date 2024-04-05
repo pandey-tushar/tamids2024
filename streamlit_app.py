@@ -566,7 +566,7 @@ def effects_slr():
         unsafe_allow_html = True,
     )
     # Getting the graph
-    HtmlFile = open(f"HTML/Marine_construction_GDP_Percentage.html", "r", encoding="utf-8")
+    HtmlFile = open(f"HTML/Tourism_GDP_Percentage.html", "r", encoding="utf-8")
     source_code_2 = HtmlFile.read()
     components.html(source_code_2, height=500)
     st.write(" ")
