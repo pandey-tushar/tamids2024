@@ -457,6 +457,7 @@ def effects_slr():
                 surrounding water. Any alteration in the conductivity of the 
                 environment, such as changes in salt levels or types of ions, 
                 can negatively impact the metabolic functions of these organisms.
+                
                 * **Agriculture:** Conductivity, specifically soil electrical 
                 conductivity (EC), plays a critical role in agriculture by 
                 influencing soil health, nutrient availability, and plant growth.
@@ -466,6 +467,7 @@ def effects_slr():
                 leading to reduced crop yields. Conversely, low soil EC might 
                 suggest a lack of nutrients, necessitating fertilization for 
                 optimal plant growth. 
+                
                 * **Drinking Water:** High conductivity levels, resulting 
                 from elevated concentrations of dissolved salts and minerals,
                 can lead to water tasting salty, which may discourage consumption
@@ -480,6 +482,7 @@ def effects_slr():
                 guidelines requires monitoring and potentially treating water to 
                 remove excess salts, which can be costly but is essential for 
                 maintaining the health and well-being of communities.
+                
                 * **Infrastructure:** The impact of conductivity/salinity in 
                 water on infrastructure is significant and multifaceted. 
                 High levels of salinity in water can lead to corrosion and
@@ -521,6 +524,7 @@ def effects_slr():
                 harming aquatic life and ecosystem health in coastal areas. 
                 Understanding these interactions is crucial for managing the 
                 consequences of sea level rise on water quality and coastal environments.
+                
                 * **Reference Levels:** 
                 <ul>
                 <li> Dissolved Oxygen(DO) levels above 8 mg/L are considered indicative of good water quality.
@@ -539,6 +543,31 @@ def effects_slr():
     st.image(image, use_column_width=True)
 
     st.write(" ")
+    st.markdown(
+        """    
+                <p style = 'text-align:justify;'>
+                We look at different GDP percentages for different states for Total Ocean GDP. 
+                In this figure to the left, we see that the GDP percentage coming from the ocean 
+                economy is declining for the state of South Carolina. While there can be multiple
+                reasons for this trend, a few of them are salinity in the water and reduced biomass
+                index. This is one of the reasons why we considered the different aspects, as 
+                indicators, of the effects of SLR. We do the same plot for four different types of 
+                GDPs, namely Ocean, Marine construction, marine transportation, and tourism 
+                contributions towards the GDP of the state. We make a graph using plotly for 
+                different states for all four GDPs. 
+                </p>
+                """,
+        unsafe_allow_html = True,
+    )
+    # Getting the graph
+    HtmlFile = open(f"HTML/Total_ocean_GDP_Percentage.html", "r", encoding="utf-8")
+    source_code_2 = HtmlFile.read()
+    components.html(source_code_2, height=500)
+    st.write(" ")
+
+
+
+
 
 
 # ------------------ About the Authors -------------------------
