@@ -117,17 +117,20 @@ def home_page():
 def east_coast():
     st.title("Sea Levels on the east coast")
     st.write(" ")
-    st.write("""Below is the sea level rise estimates averaged
+    st.write(
+        """Below is the sea level rise estimates averaged
             over first few months of a year after using LSTM and SARIMAX model to
             predict the future values until the year 2103.
-            """)
-    #Getting the graph
-    HtmlFile = open(f"HTML/SLR_predictions.html",'r',encoding = 'utf-8')
+            """
+    )
+    # Getting the graph
+    HtmlFile = open(f"HTML/SLR_predictions.html", "r", encoding="utf-8")
     source_code_2 = HtmlFile.read()
-    components.html(source_code_2,height = 500)
+    components.html(source_code_2, height=500)
     st.write(" ")
 
-    st.write("""
+    st.write(
+        """
             We can see that not only the sea levels are going to rise over
             the years, but it's also going up substantially. Here, we have predicted
             the sea level averaged over the month of Jan, Feb, March, Apr, May. 
@@ -138,7 +141,8 @@ def east_coast():
             the value we have on the graph.
 
             !! This is very concerning !!
-            """)
+            """
+    )
 
 
 # ~~~~~~~~~~~~~~~~~~ Causal interference of the sea level rise ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -229,7 +233,7 @@ def predicting_sea_level():
         st.success(f"Sea level is {output_gom} mm.")
 
     st.write("""## East Coast""")
-    model_na = load_model("models/model_na_3.hdf5")
+    # model_na = load_model("models/model_na_3.hdf5")
 
     key_co_na, key_no2_na, key_pm10_na, key_so2_na = (
         "key_co_na",
