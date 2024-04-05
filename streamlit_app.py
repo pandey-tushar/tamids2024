@@ -74,6 +74,7 @@ def home_page():
     st.markdown(
         """
                 <p style='text-align: justify;'>
+                
                  * **Area of interest:** The study area comprises the states of Texas, Louisiana, Mississippi,
                  Alabama, Florida, Georgia, North Carolina, South Carolina, Virginia,
                  Delaware, New Jersey, New York, Connecticut, Rhode Island,
