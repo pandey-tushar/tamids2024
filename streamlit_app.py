@@ -146,7 +146,7 @@ def home_page():
 # ------------------ Data Exploration  -------------------------
 def data_exploration():
     st.write(" ")
-    st.write(" Sea Level Rise ")
+    st.write("## Sea Level Rise ")
     st.write(" ")
     st.markdown(
         """
@@ -175,9 +175,38 @@ def data_exploration():
     st.image(image, use_column_width=True)
 
     st.write(" ")
+    st.write("## Effects of SLR ")
+    st.write(" ")
+    st.markdown(
+        """
+        The Coastal Data and Analysis Tool for Water Resources Management
+        (CDAT-WRM) supplied data related to specific conductance for
+        investigations that included coastal water management-related 
+        visualizations. It  incorporates components of two existing U.S. 
+        Geological Survey websites, the Water Level and Salinity Analysis 
+        Mapper (U.S. Geological Survey, 2021a) and the Coastal Salinity 
+        Index (U.S. Geological Survey, 2021b). The specific conductance 
+        values are derived from a summary of the complete day of readings
+        and represents the mean value. 
 
+        Globally gridded dataset of DO in surface water for the period 
+        1993-2010, monthly observations was downloaded from The World 
+        Bank Data Catalog (World Bank Data Catalog) for the Chesapeake 
+        Bay, which is the largest estuary in the United States. The
+        Delmarva Peninsula divides the bay, which is in the mid-Atlantic 
+        region, from the Atlantic Ocean.
+        """,
+        unsafe_allow_html = True,
+    )
 
+    st.write(" ")
+    # Setting the Image
+    image = Image.open("Images/relative_sea_level_rise.jpg")
 
+    # Setting the image width
+    st.image(image, use_column_width=True)
+
+    st.write(" ")
 
 
 
