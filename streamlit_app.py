@@ -328,19 +328,38 @@ def impact_slr():
     st.markdown(
         """
                 <p style='text-align: justify;'>
-            In this competition, we are tasked with analyzing historical
-            data regarding sea level rise and the impact of human activities
-            on climate systems.The goal is to identify patterns and trends
-            using predictive models to understand patterns in sea level rise
-            and consequently comprehend the impact due to sea level rise in
-            terms of. We work to map communities most affected by these changes. 
-
-            Additionally, it's worthwile to monitor real-time environmental changes.
-            The stretch goal beyond this competition is to leverage data-driven
-            approaches to enhance our predictive capabilities and management
-            strategies for mitigating the impact of climate change on human
-            communities and natural resources.
-             </p>
+                 * **Area of interest:** The study area comprises the states of Texas, Louisiana, Mississippi,
+                 Alabama, Florida, Georgia, North Carolina, South Carolina, Virginia,
+                 Delaware, New Jersey, New York, Connecticut, Rhode Island,
+                 Massachusetts, Maine, and Pennsylvania. The states encompass the Gulf
+                 of Mexico and the Eastern Coast of the Contiguous United States (CONUS)
+                 adjacent to the North Atlantic Ocean. Low-lying coastal areas are among
+                 the most vulnerable to the effects of sea level rise, with a total
+                 population of almost 300 million living along the coasts of the globe,
+                 including 20 of the 33 megacities
+                 
+                 * **SLR Data:** Sea level rise data was acquired from National Oceanic and Atmospheric
+                 Administration’s (NOAA)/NESDIS/STAR Laboratory for Satellite Altimetry
+                 website for sea level data (NOAA/NESDIS/STAR). The program processing
+                 system generated the data, which included information from all altimeter
+                 Copernicus missions (Sentinel-6A and Sentinel-3A) as well as other
+                 collaboration opportunity missions (Jason-3 and Topex/Poseidon). The
+                 dataset was obtained for the period 1993-2023.
+                 
+                 * **Effects of SLR:** The Coastal Data and Analysis Tool for Water Resources Management
+                 (CDAT-WRM) supplied data related to specific conductance for
+                 investigations that included coastal water management-related
+                 visualizations. It  incorporates components of two existing U.S.
+                 Geological Survey websites, the Water Level and Salinity Analysis
+                 Mapper (U.S. Geological Survey, 2021a) and the Coastal Salinity
+                 Index (U.S. Geological Survey, 2021b).
+                 
+                 * **Dissolved Oxygen:** Globally gridded dataset of DO in surface water for the period
+                 1993-2010, monthly observations was downloaded from The World Bank
+                 Data Catalog (World Bank Data Catalog) for the Chesapeake Bay,
+                 which is the largest estuary in the United States. The Delmarva
+                 Peninsula divides the bay, which is in the mid-Atlantic region.
+                 </p>
                 """,
         unsafe_allow_html=True,
     )
