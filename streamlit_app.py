@@ -114,7 +114,7 @@ def home_page():
 
 
 # ------------------ Sea Levels on the east coast  -------------------------
-def east_coast():
+def data_exploration():
     st.title("Sea Levels on the east coast")
     st.write(" ")
     st.write(
@@ -422,7 +422,7 @@ navigation_tab = st.sidebar.selectbox(
     "Choose a tab",
     (
         "Home-Page",
-        "Sea Levels on the east coast",
+        "Exploring the data",
         "Green house emissions and sea level rise",
         "Predicting Sea levels",
         "Controlling sea level rise",
@@ -437,8 +437,8 @@ if navigation_tab == "Home-Page":
     home_page()
 
 # First page -
-elif navigation_tab == "Sea Levels on the east coast":
-    east_coast()
+elif navigation_tab == "Exploring the data":
+    data_exploration()
 
 
 # Second Page -
