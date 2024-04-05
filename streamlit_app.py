@@ -340,7 +340,15 @@ def predicting_sea_level():
     st.image(image, use_column_width=True)
 
     st.write(" ")
-    
+    st.write(
+        """
+        Below is a live prediction model, that takes in different values of the
+        pollutants, and outputs the SLR value for this amount of poolution. 
+        This model would be very helpful for future policies and its impact 
+        on SLR and therefore on different effects like salinity, conductance 
+        and Dissolved Oxygen. 
+        """
+    )
     
     st.write(" ")
 
