@@ -213,7 +213,7 @@ def data_exploration():
 # ~~~~~~~~~~~~~~~~~~ Causal interference of the sea level rise ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def network_analysis():
     st.title(
-        "Relationship between different green house gas emissions and sea level rise"
+        "Green house gas emissions and sea level rise"
     )
     st.write(" ")
     st.write(
@@ -312,6 +312,31 @@ def predicting_sea_level():
             !! This is very concerning !!
             """
     )
+
+    st.write(" ")
+
+    st.markdown(
+        """
+        Next we try to look at different factors contributing to SLR. We have 
+        tried to model the different pollutants emitted from industrial
+        processes, power plants, vehicle exhausts and biomass burning. The initial 
+        dataset with which we decided to work contained the greenhouse gas data
+        like Sulphur Dioxide (SO2), Carbon Monoxide (CO), Carbon Dioxide (CO2),
+        particulate matter 10 (PM10) and particulate matter (PM2.5). The reasons
+        for selecting these predictors have been shown in Table .
+        """,
+        unsafe_allow_html = True,
+    )
+
+    st.write(" ")
+    # Setting the Image
+    image = Image.open("Images/pollutants.jpg")
+
+    # Setting the image width
+    st.image(image, use_column_width=True)
+
+    st.write(" ")
+    
     
     st.write(" ")
 
