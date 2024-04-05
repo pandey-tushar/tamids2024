@@ -199,14 +199,7 @@ def data_exploration():
         unsafe_allow_html = True,
     )
 
-    st.write(" ")
-    # Setting the Image
-    image = Image.open("Images/relative_sea_level_rise.jpg")
-
-    # Setting the image width
-    st.image(image, use_column_width=True)
-
-    st.write(" ")
+    
 
 
 
