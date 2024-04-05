@@ -64,7 +64,7 @@ def home_page():
     st.markdown(
         """
                 <p style='text-align: justify;'>
-                 The study area comprises the states of Texas, Louisiana, Mississippi,
+                 * **Area of interest:** The study area comprises the states of Texas, Louisiana, Mississippi,
                  Alabama, Florida, Georgia, North Carolina, South Carolina, Virginia,
                  Delaware, New Jersey, New York, Connecticut, Rhode Island,
                  Massachusetts, Maine, and Pennsylvania. The states encompass the Gulf
@@ -75,7 +75,7 @@ def home_page():
                  including 20 of the 33 megacities
                  </p>
                  <p style='text-align: justify;'>
-                 Sea level rise data was acquired from National Oceanic and Atmospheric
+                 * **SLR Data:** Sea level rise data was acquired from National Oceanic and Atmospheric
                  Administration’s (NOAA)/NESDIS/STAR Laboratory for Satellite Altimetry
                  website for sea level data (NOAA/NESDIS/STAR). The program processing
                  system generated the data, which included information from all altimeter
@@ -84,7 +84,7 @@ def home_page():
                  dataset was obtained for the period 1993-2023.
                  </p>
                  <p style='text-align: justify;'>
-                 The Coastal Data and Analysis Tool for Water Resources Management
+                 * **Effects of SLR:** The Coastal Data and Analysis Tool for Water Resources Management
                  (CDAT-WRM) supplied data related to specific conductance for
                  investigations that included coastal water management-related
                  visualizations. It  incorporates components of two existing U.S.
@@ -93,7 +93,7 @@ def home_page():
                  Index (U.S. Geological Survey, 2021b).
                  </p>
                  <p style='text-align: justify;'>
-                 Globally gridded dataset of DO in surface water for the period
+                 * **Dissolved Oxygen:** Globally gridded dataset of DO in surface water for the period
                  1993-2010, monthly observations was downloaded from The World Bank
                  Data Catalog (World Bank Data Catalog) for the Chesapeake Bay,
                  which is the largest estuary in the United States. The Delmarva
