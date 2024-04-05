@@ -222,6 +222,25 @@ def network_analysis():
 
     st.write(" ")
 
+    st.write("""
+            <p>
+            In this dynamic visualization, we have a few parameters that are
+            adjustable to the user. We can color the nodes using different features,
+            such as the CO level, NO2 level, Particulates, SLR etc. Another
+            adjustable feature is whether we want to look at the mean of each node
+            for the feature selected, or the maximum or the minimum. Clicking on any
+            node will let us see the data points in that node. Note that we have
+            used a DBSCAN based clustering method and created a network graph that
+            adds an edge between local clusters. We also have a feature to look for
+            any specific year or decade and see how the levels were in that year. 
+            We have used the concept of Topological Data Analysis, and more
+            specifically the mapper algorithm to look at the connectivity in the
+            dataset. We do the same plot for both the Atlantic Ocean and Gulf of
+            Mexico. This provides us with an amazing overview of the relationship 
+            between levels of pollutants and SLR over different years and decades. 
+            </p>
+            """)
+
 
 # ~~~~~~~~~~~~~~~~~ Predicting Sea levels ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def predicting_sea_level():
