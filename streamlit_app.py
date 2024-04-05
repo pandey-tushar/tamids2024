@@ -374,8 +374,8 @@ def authors():
                * **University:** Texas A&M University ()
                * **Degree:** PhD Student ( Engineering)
                * **Email:** 
-               * **LinkedIn:** []()
-               * **Github:** []()
+               * **LinkedIn:** [linkedin.com/in/sheelabhadra/](https://www.linkedin.com/in/sheelabhadra/)
+               * **Github:** [github.com/sheelabhadra](https://github.com/sheelabhadra)
                """
     )
     st.write("")
@@ -392,16 +392,16 @@ def authors():
     # col1.image(image, use_column_width=True)
 
     # Sheil -
-    col3.write("## Sheel")
+    col3.write("## Sheelabhadra Dey")
 
     # About section -
     col3.write(
         """
-               Research Area: 
+               Research Area: Reinforcement Learning
 
-               * **University:** Texas A&M University ()
-               * **Degree:** PhD Student ( Engineering)
-               * **Email:** 
+               * **University:** Texas A&M University
+               * **Degree:** PhD Student (Computer Science)
+               * **Email:** sheelabhadra@tamu.edu
                * **LinkedIn:** []()
                * **Github:** []()
                """
