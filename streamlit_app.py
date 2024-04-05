@@ -458,7 +458,18 @@ def effects_slr():
         surrounding water. Any alteration in the conductivity of the 
         environment, such as changes in salt levels or types of ions, 
         can negatively impact the metabolic functions of these organisms.
-
+        * **Agriculture:** Conductivity, specifically soil electrical 
+        conductivity (EC), plays a critical role in agriculture by 
+        influencing soil health, nutrient availability, and plant growth.
+        High soil EC can indicate the presence of essential nutrients 
+        like potassium, calcium, and magnesium, but excessive levels may 
+        lead to soil salinity, adversely affecting plant water uptake and
+        leading to reduced crop yields. Conversely, low soil EC might 
+        suggest a lack of nutrients, necessitating fertilization for 
+        optimal plant growth. Precision agriculture leverages soil EC 
+        measurements to map field variability, enabling targeted 
+        management practices that can enhance crop production 
+        efficiency and sustainability. 
         </p>
         """,
         unsafe_allow_html = True,
