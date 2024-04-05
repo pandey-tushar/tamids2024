@@ -290,79 +290,9 @@ def network_analysis():
             """,
         unsafe_allow_html=True,)
     
-    st.write(" ")
-    st.markdown("""   
-                <p>
-                We look at different GDP percentages for different states for Total Ocean GDP. 
-                In this figure to the left, we see that the GDP percentage coming from the ocean 
-                economy is declining for the state of South Carolina. While there can be multiple
-                reasons for this trend, a few of them are salinity in the water and reduced biomass
-                index. This is one of the reasons why we considered the different aspects, as 
-                indicators, of the effects of SLR. We do the same plot for four different types of 
-                GDPs, namely Ocean, Marine construction, marine transportation, and tourism 
-                contributions towards the GDP of the state. We make a graph using plotly for 
-                different states for all four GDPs. 
-                </p>
-                """,
-        unsafe_allow_html = True,
-    )
     
-    st.write(" ")
-    # Getting the graph
-    HtmlFile = open(f"HTML/Tourism_GDP_Percentage.html", "r", encoding="utf-8")
-    source_code_2 = HtmlFile.read()
-    components.html(source_code_2, height=500)
-    st.write(" ")
 
 
-# ~~~~~~~~~~~~~~~~~~ Controlling sea level rise ~~~~~~~~~~~~~~~~~~~~~~~
-def impact_slr():
-    st.title("Impacts of SLR")
-    st.write(" ")
-
-    st.write(
-        """
-             ## Problem Statement
-             """
-    )
-    st.markdown(
-        """
-                <p style='text-align: justify;'>
-                 * **Area of interest:** The study area comprises the states of Texas, Louisiana, Mississippi,
-                 Alabama, Florida, Georgia, North Carolina, South Carolina, Virginia,
-                 Delaware, New Jersey, New York, Connecticut, Rhode Island,
-                 Massachusetts, Maine, and Pennsylvania. The states encompass the Gulf
-                 of Mexico and the Eastern Coast of the Contiguous United States (CONUS)
-                 adjacent to the North Atlantic Ocean. Low-lying coastal areas are among
-                 the most vulnerable to the effects of sea level rise, with a total
-                 population of almost 300 million living along the coasts of the globe,
-                 including 20 of the 33 megacities
-                 
-                 * **SLR Data:** Sea level rise data was acquired from National Oceanic and Atmospheric
-                 Administration’s (NOAA)/NESDIS/STAR Laboratory for Satellite Altimetry
-                 website for sea level data (NOAA/NESDIS/STAR). The program processing
-                 system generated the data, which included information from all altimeter
-                 Copernicus missions (Sentinel-6A and Sentinel-3A) as well as other
-                 collaboration opportunity missions (Jason-3 and Topex/Poseidon). The
-                 dataset was obtained for the period 1993-2023.
-                 
-                 * **Effects of SLR:** The Coastal Data and Analysis Tool for Water Resources Management
-                 (CDAT-WRM) supplied data related to specific conductance for
-                 investigations that included coastal water management-related
-                 visualizations. It  incorporates components of two existing U.S.
-                 Geological Survey websites, the Water Level and Salinity Analysis
-                 Mapper (U.S. Geological Survey, 2021a) and the Coastal Salinity
-                 Index (U.S. Geological Survey, 2021b).
-                 
-                 * **Dissolved Oxygen:** Globally gridded dataset of DO in surface water for the period
-                 1993-2010, monthly observations was downloaded from The World Bank
-                 Data Catalog (World Bank Data Catalog) for the Chesapeake Bay,
-                 which is the largest estuary in the United States. The Delmarva
-                 Peninsula divides the bay, which is in the mid-Atlantic region.
-                 </p>
-                """,
-        unsafe_allow_html=True,
-    )
 
 
 # ~~~~~~~~~~~~~~~~~~ Controlling sea level rise ~~~~~~~~~~~~~~~~~~~~~~~
@@ -378,7 +308,7 @@ def impacts_slr():
     st.markdown(
         """
                 <p style='text-align: justify;'>
-                * **Freshwater Aquatic Ecosystem:** Most aquatic organisms have a 
+                 * **Freshwater Aquatic Ecosystem:** Most aquatic organisms have a 
                 specific range of salinity they can tolerate. Their physiological 
                 adaptation is shaped by the salinity of their surroundings.
                 Certain species, such as sea stars and sea cucumbers, are 
@@ -428,9 +358,9 @@ def impacts_slr():
                 efficiency of water treatment plants by increasing the cost 
                 and complexity of water purification processes, as highlighted
                 by the United States Geological Survey (USGS, 2016). 
-            </p>
+                 </p>
                 """,
-        unsafe_allow_html = True,
+        unsafe_allow_html=True,
     )
 
     st.write(" ")
@@ -448,7 +378,8 @@ def impacts_slr():
     )
     st.markdown(
         """
-        <p style='text-align: justify;'>
+                <p style='text-align: justify;'>
+                
                 * **BOD and DO:** Sea level rise indirectly impacts 
                 biological oxygen demand (BOD) and dissolved oxygen(DO) through various 
                 factors such as increased organic matter input from erosion, altered 
