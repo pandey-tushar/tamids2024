@@ -143,9 +143,42 @@ def home_page():
     st.info("Please navigate using the select box in the sidebar on the left.")
 
 
-# ------------------ Sea Levels on the east coast  -------------------------
+# ------------------ Data Exploration  -------------------------
 def data_exploration():
     st.write(" ")
+    st.write(" Sea Level Rise ")
+    st.write(" ")
+    st.markdown(
+        """
+        Sea level rise data was acquired from National Oceanic and Atmospheric
+        Administration’s (NOAA)/NESDIS/STAR Laboratory for Satellite Altimetry 
+        website for sea level data (NOAA/NESDIS/STAR). The program processing 
+        system generated the data, which included information from all altimeter
+        Copernicus missions (Sentinel-6A and Sentinel-3A) as well as other
+        collaboration opportunity missions (Jason-3 and Topex/Poseidon). The 
+        dataset was obtained for the period 1993-2023. Data was downloaded in 
+        netCDF format and analyzed using ArcGIS Pro. Additional data for
+        visualization purposes were downloaded from Copernicus Climate Change
+        (C3) Services. Two variables “adt” and “sla” were downloaded from 
+        1993-2023 to observe the sea level rise in the Gulf of Mexico and 
+        North Atlantic Ocean along the Southeastern and Eastern US Coast 
+        (Copernicus Climate Change (C3)).
+
+        """,
+        unsafe_allow_html = True,
+    )
+    st.write(" ")
+    # Setting the Image
+    image = Image.open("Images/relative_sea_level_rise.jpg")
+
+    # Setting the image width
+    st.image(image, use_column_width=True)
+
+    st.write(" ")
+
+
+
+
 
 
 # ~~~~~~~~~~~~~~~~~~ Causal interference of the sea level rise ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
