@@ -4,6 +4,10 @@ import pandas as pd
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout, BatchNormalization
 from tensorflow.keras.callbacks import EarlyStopping
+from tensorflow.keras.initializers import Orthogonal
+import joblib
+
+custom_objects = {"Orthogonal": Orthogonal}
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
 import altair as alt
@@ -340,12 +344,8 @@ def predicting_sea_level():
     
     st.write(" ")
 
-    if "visibility" not in st.session_state:
-        st.session_state.visibility = "visible"
-        st.session_state.disabled = False
-
     st.write("""## Gulf of Mexico""")
-    # model_gom = load_model("models/model_gom_3.hdf5")
+    model_gom = load_model("models/model_gom_3.hdf5", custom_objects=custom_objects)
 
     key_co_gom, key_no2_gom, key_pm10_gom, key_so2_gom = (
         "key_co_gom",
@@ -359,18 +359,36 @@ def predicting_sea_level():
     pm10_gom = st.text_input(label="Particulate Matter 10mm (PM-10)", key=key_pm10_gom)
     so2_gom = st.text_input(label="Sulphur Dioxide (SO2)", key=key_so2_gom)
 
-    # # Normalize the predictors
-    # scaler = MinMaxScaler()
-    # predictors = np.array([[so2_gom, co_gom, pm10_gom, no2_gom]])
-    # predictors_scaled = scaler.fit_transform(predictors)
+    def safe_float_convert(input_str):
+        try:
+            return float(input_str)
+        except ValueError:
+            return None
+
+    # Convert inputs to float, handling empty strings
+    pm10_val = safe_float_convert(pm10_gom)
+    co_val = safe_float_convert(co_gom)
+    so2_val = safe_float_convert(so2_gom)
+    no2_val = safe_float_convert(no2_gom)
+
+    # Check if any conversion failed (i.e., input was empty or not a valid number)
+    if None in [pm10_val, co_val, so2_val, no2_val]:
+        st.error("Please enter valid numerical values for all inputs.")
+    else:
+        # Proceed with normalization and prediction
+        predictors = np.array([[so2_val, co_val, pm10_val, no2_val]])
+        scaler = joblib.load("models/scaler_gom.pkl")
+        predictors_scaled = scaler.transform(predictors)
+        predictors_scaled = np.repeat(predictors_scaled[np.newaxis, :, :], 10, axis=1)
 
     if st.button(label="Predict", key="predict_gom"):
-        # output_gom = model_gom.predict(predictors_scaled)
-        output_gom = 150
-        st.success(f"Sea level is {output_gom} mm.")
+        output_gom = (
+            model_gom.predict(predictors_scaled)[0][0] * (198.69 + 195.39) - 195.39
+        )
+        st.success(f"Sea level is {output_gom:.2f} mm.")
 
     st.write("""## East Coast""")
-    # model_na = load_model("models/model_na_3.hdf5")
+    model_na = load_model("models/model_na_5.hdf5")
 
     key_co_na, key_no2_na, key_pm10_na, key_so2_na = (
         "key_co_na",
@@ -384,15 +402,25 @@ def predicting_sea_level():
     pm10_na = st.text_input(label="Particulate Matter 10mm (PM-10)", key=key_pm10_na)
     so2_na = st.text_input(label="Sulphur Dioxide (SO2)", key=key_so2_na)
 
-    # # Normalize the predictors
-    # scaler = MinMaxScaler()
-    # predictors = np.array([[pm10_na, co_na, so2_na, no2_na]])
-    # predictors_scaled = scaler.fit_transform(predictors)
+    # Convert inputs to float, handling empty strings
+    pm10_val = safe_float_convert(pm10_na)
+    co_val = safe_float_convert(co_na)
+    so2_val = safe_float_convert(so2_na)
+    no2_val = safe_float_convert(no2_na)
+
+    # Check if any conversion failed (i.e., input was empty or not a valid number)
+    if None in [pm10_val, co_val, so2_val, no2_val]:
+        st.error("Please enter valid numerical values for all inputs.")
+    else:
+        # Proceed with normalization and prediction
+        predictors = np.array([[pm10_val, co_val, so2_val, no2_val]])
+        scaler = joblib.load("models/scaler_na.pkl")
+        predictors_scaled = scaler.transform(predictors)
+        predictors_scaled = np.repeat(predictors_scaled[np.newaxis, :, :], 10, axis=1)
 
     if st.button("Predict", key="predict_na"):
-        # output_na = model_na.predict(predictors_scaled)
-        output_na = 150
-        st.success(f"Sea level is {output_na} mm.")
+        output_na = model_na.predict(predictors_scaled)[0][0] * (140.21 + 79.27) - 79.27
+        st.success(f"Sea level is {output_na:.2f} mm.")
 
 
 # ~~~~~~~~~~~~~~~~~~ Controlling sea level rise ~~~~~~~~~~~~~~~~~~~~~~~
