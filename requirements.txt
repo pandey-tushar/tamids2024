@@ -1,4 +1,4 @@
 streamlit>=1.26.0
-tensorflow
+tensorflow==2.15.0
 joblib
 scikit-learn
