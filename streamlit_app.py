@@ -315,6 +315,19 @@ def network_analysis():
     st.write(" ")
 
 
+# ~~~~~~~~~~~~~~~~~~ Controlling sea level rise ~~~~~~~~~~~~~~~~~~~~~~~
+def impact_slr():
+    st.title("Impacts of SLR")
+    st.write(" ")
+
+    st.markdown("""
+                <p>
+                * **abc**: gasga
+                </p>
+                """,
+                unsafe_allow_html = True,
+               )
+
 
 # ~~~~~~~~~~~~~~~~~~ Controlling sea level rise ~~~~~~~~~~~~~~~~~~~~~~~
 def impacts_slr():
@@ -763,7 +776,7 @@ elif navigation_tab == "Predicting Sea levels":
 
 # Fourth Page -
 elif navigation_tab == "Impacts of SLR":
-    impacts_slr()
+    impact_slr()
 
 # About Page -
 elif navigation_tab == "About the Authors":
