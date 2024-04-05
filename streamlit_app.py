@@ -101,27 +101,6 @@ def home_page():
         unsafe_allow_html=True,
     )
 
-    st.markdown(
-        """
-                <p style='text-align: justify;'>
-             The abstract keywords per department were calculated by using NLP algorithms on the dataset containing the 
-             abstracts of the publications using unigram, bigram and trigram to find the most frequently occurring sequential tokens. 
-             From the sequential tokens, the generic words were removed to formulate a clean corpus which was used to compute the four 
-             types of scores defined above.
-             </p>
-                """,
-        unsafe_allow_html=True,
-    )
-    st.markdown(
-        """
-                <p style='text-align: justify;'>
-             In order to have a better understanding of these metrics, a graphical representation per department was plotted which 
-             has been included in our website and a few of these plots have been shown below.
-             </p>
-                """,
-        unsafe_allow_html=True,
-    )
-
     # Overview -
     st.write(
         """
