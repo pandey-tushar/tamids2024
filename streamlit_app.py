@@ -134,9 +134,28 @@ def home_page():
         """
                 <p style='text-align: justify;'>
 
-                * **Feature Engineering:** Data normalization explained
-                * **Unsupervised Learning:** Clustering based on different features of the data. Rather, with the mapper package, we see a better picture of our clusters which brings us to the visualizations.
-                * **Dynamic Visualization:** About TDA and other visualization. Therefore, the website we have designed is very dynamic and suitable for everyone.
+                * **Feature Engineering:** Data normalization, filling null values,
+                shortlisting counties of choice.
+                * **Unsupervised Learning:** Clustering based on different
+                features of the data. Rather, with the mapper package,
+                we see a better picture of our clusters which brings us to
+                the visualizations.
+                * **Dynamic Visualization:** About TDA and other visualization.
+                Therefore, the website we have designed is very dynamic and suitable
+                for future use as well.
+                * **Modelling:** An ensemble of 5 LSTM models to find
+                the most optimal model in predicting SLR (along the East Coast and
+                Gulf of Mexico). Determine the predictive weights for future SLR
+                projections, contingent upon variable greenhouse gas levels influenced
+                by governmental policies and strategies. A weighted hybrid model
+                combining Long Short-Term Memory (LSTM) and Seasonal Autoregressive
+                Integrated Moving Average with Exogenous Regressors (SARIMAX)
+                methodologies. Construct an interactive tool capable of
+                predicting SLR outcomes based on user-inputted pollutant levels,
+                projecting up to the year 2100. Comprehensive project with insights
+                into the potential ramifications of climate policy on global warming, with 
+                a particular focus on Sea Level Rise, thereby enabling predictions regarding
+                its subsequent effects on biodiversity, water salinity, and agricultural conditions.
              </p>
                 """,
         unsafe_allow_html=True,
