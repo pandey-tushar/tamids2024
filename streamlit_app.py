@@ -199,7 +199,14 @@ def data_exploration():
         unsafe_allow_html = True,
     )
 
-    
+    st.write(" ")
+    # Setting the Image
+    image = Image.open("Images/C_bay.jpg")
+
+    # Setting the image width
+    st.image(image, use_column_width=True)
+
+    st.write(" ")
 
 
 
