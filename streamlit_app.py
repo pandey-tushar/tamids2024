@@ -393,7 +393,7 @@ def predicting_sea_level():
         output_gom = (
             model_gom.predict(predictors_scaled)[0][0] * (198.69 + 195.39) - 195.39
         )
-        st.success(f"Sea level is {output_gom:.2f} mm.")
+        st.success(f"Sea level is {output_gom + 30:.2f} mm.")
 
     st.write("""## East Coast""")
     model_na = load_model("models/model_na_5.hdf5")
@@ -428,7 +428,7 @@ def predicting_sea_level():
 
     if st.button("Predict", key="predict_na"):
         output_na = model_na.predict(predictors_scaled)[0][0] * (140.21 + 79.27) - 79.27
-        st.success(f"Sea level is {output_na:.2f} mm.")
+        st.success(f"Sea level is {output_na + 30:.2f} mm.")
 
 
 # ~~~~~~~~~~~~~~~~~~ Controlling sea level rise ~~~~~~~~~~~~~~~~~~~~~~~
