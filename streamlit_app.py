@@ -743,7 +743,7 @@ elif navigation_tab == "Predicting Sea levels":
 
 # Fourth Page -
 elif navigation_tab == "Impacts of SLR":
-    impact_slr()
+    impacts_slr()
 
 # About Page -
 elif navigation_tab == "About the Authors":
